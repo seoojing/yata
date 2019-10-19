@@ -178,6 +178,10 @@ a5 {
 			50%{ opacity: 1;}
 			100%{ opacity: 0;}
 		}
+	#yaa0{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 38%;font-family: "DungGeunMo";cursor: pointer; z-index: 999;}
+	#yaa0:hover{color: white; }
+	#noo0{bottom: 11%; font-weight: 5px; font-size: 1em;display:none; left: 50%;font-family: "DungGeunMo";cursor: pointer;z-index: 999;}
+	#noo0:hover{color: white; }
 
 
 #poom{bottom: 13%; font-weight: 5px; font-size: 1em;display:none; left: 23%;font-family: "DungGeunMo";z-index: 100;}
@@ -186,6 +190,7 @@ a5 {
 #poom3{bottom: 13%; font-weight: 5px; font-size: 1em; left: 23%;font-family: "DungGeunMo"; z-index: 100;}
 #poom4{bottom: 13%; font-weight: 5px; font-size: 1em; left: 23%;font-family: "DungGeunMo"; z-index: 101; display: none;}
 #poom5{bottom: 13%; font-weight: 5px; font-size: 1em; left: 23%;font-family: "DungGeunMo"; z-index: 100; display: none;}
+#poom6{bottom: 13%; font-weight: 5px; font-size: 1em; left: 23%;font-family: "DungGeunMo"; z-index: 100; display: none;}
 
 	#next{bottom: 15%; right: 25%;z-index: 200; cursor: pointer; position: absolute;display:none;animation: tong 2s infinite;}
 		#next img{height: 50px;width: auto; }
@@ -483,11 +488,18 @@ h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
 		 <h2 id="poom3">어두워서 아무것도 보이지가 않아. 적막 속 키보드 소리가 들려온다...</h2>
 		 <h2 id="poom4" style="color: #531616;">"밝게 빛낼 수 있는 무언가가 없을까?"</h2>		
 		 <h2 id="poom5">닳고 오래되어 보이는 곰돌이 인형이다.</h2>
+		 <h2 id="poom6">『성지』 이벤트를 진행할까요?</h2>
 
 		 <h1 id="ch">▶ 불러보자 </h1>	
  		<h1 id="choose2">▶ 그만두자 </h1>	
 
+<a href="https://seoojing.github.io/gengi/">
+	 	 <h10 id="yaa0">▶ 예</h10>
+</a>
 
+<a href="https://seoojing.github.io/simada/">
+		<h10 id="noo0">▶ 아니오, 이미 했습니다.</h10>
+</a>
 
 	<div id="okk">
 		<img src="okk.png">
@@ -557,7 +569,7 @@ h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
 var fa = 0;
 window.onmousemove = function(){	
 	fa++;
-	if(fa == 1){ walk.play(); }
+	if(fa == 1){ walk.play(); foot.play();}
 }
 
 function lookDiv1 (){ 
@@ -577,10 +589,16 @@ function lookDiv4 (){
 
 var on = true;
 
-
+	fronts.onclick = function(){
+		but.play(); 
+		poom6.style.display = "inline";
+		bx.style.display = "inline";
+		yaa0.style.display = "inline";
+		noo0.style.display = "inline";
+			}
 
 	ooo.onclick = function(){
-		but.play(); foot.play();
+		but.play(); 
 			toggle = "on";
 			poom3.style.display = "none"
 			ooo.style.display = "none"
