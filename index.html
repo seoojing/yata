@@ -525,6 +525,9 @@ h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
 		<img src="boox.png">
 	</div>
 
+	<audio id="beep">
+		<source src="beep.mp3" type="audio/mpeg">
+	</audio>
 
 
 
@@ -837,6 +840,8 @@ var on = true;
 
 		on = true;
 			}
+				soun11.onclick = function(){
+		beep.play();}	
 	soun3.onclick = function(){
 		click.play();
 			tada.style.display = "none";
